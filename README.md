@@ -57,6 +57,7 @@ let box = new Geom.box(0 , 0, 50, 25);
 
 
 **circ(x, y, radius)**
+
 _create a new circle_
 
 ```javascript
@@ -70,7 +71,8 @@ let circle = new Geom.circ(0 , 0, 25);
 ```
 
 
-*dist2Points(x1, y1, x2, y2)*
+**dist2Points(x1, y1, x2, y2)**
+
 _calculate distance between two points_
 
 ```javascript
@@ -80,7 +82,8 @@ let distance = Geom.dist2Points(0, 0, 10, 10);
 ```
 
 
-*angle(xLen, yLen)*
+**angle(xLen, yLen)**
+
 _calculates the angle (degrees) of a vector_
 
 ```javascript
@@ -96,7 +99,8 @@ let angle = Geom.angle(xLen, yLen);
 ```
 
 
-*vector(magnitude, angle)*
+**vector(magnitude, angle)**
+
 _breaks a vector into X and Y components_
 
 ```javascript
@@ -119,7 +123,8 @@ ___
  
 #### PROPERTIES
 
-*maxChildren*
+**maxChildren**
+
 _the maximum objects a node can contain before splitting_
 
 ```
@@ -127,7 +132,8 @@ quadTree.maxChildren  = 15;
 ```
 
 
-*maxLevel*
+**maxLevel**
+
 _the maximum number of times that a node can be split_
 
 ```
@@ -137,7 +143,8 @@ quadTree.maxLevel   = 15;
 #### METHODS 
 
 
-*node(level, bounds)*
+**node(level, bounds)**
+
 _creates a new quadtree node_
 
 ```javascript
@@ -146,7 +153,8 @@ const quadTree = new QT.node(0, bounds);
 ```
 
 
-*clear()*
+**clear()**
+
 _clears all child nodes_
 
 ```javascript
@@ -154,7 +162,7 @@ quadTree.clear();
 ```
 
 
-*split()*
+**split()**
 _split current node into quadrants_
 
 ```javascript
@@ -162,7 +170,8 @@ quadTree.split();
 ```
 
 
-*getQuadrant(rectangle)*
+**getQuadrant(rectangle)**
+
 _get quadrant containing the rectangle in the current node_
 
 ```javascript
@@ -172,7 +181,8 @@ quadTree.getQuadrant(rec);
 ```
 
 
-*insert(rectangle)*
+**insert(rectangle)**
+
 _insert a rectangle into the node (can be a Geom.box or Geom.circ)_
 
 ```javascript
@@ -182,7 +192,8 @@ quadTree.insert(rec);
 ```
 
 
-*retrieve(returnList, rectangle)*
+**retrieve(returnList, rectangle)**
+
 _retrieves all possible objects that the rectangle can collide with_
 _and stores them in the returnList_
 
@@ -194,7 +205,8 @@ quadTree.retrieve(colliderList, rec);
 ```
 
 
-*delete(rectangle)*
+**delete(rectangle)**
+
 _deletes a rectangle from the quadtree_
 
 ```javascript
@@ -209,7 +221,8 @@ ___
 The *Collision* module contains methods for testing rectangular or circular collision.
 
 
-*testRect(rec1, rec2)*
+**testRect(rec1, rec2)**
+
 _creates a new quadtree node_
 
 ```javascript
@@ -222,7 +235,8 @@ let result = Collision.testRect(rect1, rect2);
 ```
 
 
-*testCirc(circ1, circ2)*
+**testCirc(circ1, circ2)**
+
 _creates a new quadtree node_
 
 ```javascript
