@@ -16,7 +16,7 @@ ___
 
 ```
 <script src="source/geom.js"></script>
-<script src="ource/collision.js"></script>
+<script src="source/collision.js"></script>
 <script src="source/qt.js"></script>
 ```
 
