@@ -180,7 +180,8 @@ window.QT = (function(){
             let quadrants = this.getQuadrant( rectangle );
             
             for(let ctr = 0; ctr < quadrants.length; ctr++ )
-                this.nodes[ quadrants[ ctr ] ].delete( rectangle );             
+                if(this.nodes[ quadrants[ ctr ] ])
+                    this.nodes[ quadrants[ ctr ] ].delete( rectangle );             
         }
         else
         {
@@ -188,23 +189,12 @@ window.QT = (function(){
             
             for(let ctr = 0; ctr < this.children.length; ctr++ )
             {                
-                if( rectangle == this.children[ ctr ] )
+                if( rectangle.id == this.children[ ctr ].id )
                 {
                     parent = this.parent;
                     
                     this.children[ ctr ] = null;
                     this.children.splice( ctr, 1 );
-                    
-                    if( parent )
-                        if( 
-                            !parent.nodes[ 0 ].children.length && 
-                            !parent.nodes[ 1 ].children.length && 
-                            !parent.nodes[ 2 ].children.length && 
-                            !parent.nodes[ 3 ].children.length 
-                        )
-                        {
-                            parent.clear();
-                        }
                     
                     break;
                 }

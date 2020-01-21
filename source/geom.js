@@ -19,7 +19,7 @@ window.Geom = (function(){
     // Create point geom
     function Point( x, y ){
         
-        this.id     = null;
+        this.id     = Date.now();
         this.name   = '';
     
         this.x      = x || 0;
