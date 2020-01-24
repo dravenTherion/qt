@@ -1,0 +1,30 @@
+{
+  "name": "qt-js",
+  "version": "1.0.3",
+  "description": "a simple quadtree library for JavaScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dravenTherion/qt.git"
+  },
+  "keywords": [
+    "quadtree",
+    "collision"
+  ],
+  "author": "Antonio Quitoriano <i.am.quitoriano@gmail.com> (https://www.madpolarlabs.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dravenTherion/qt/issues"
+  },
+  "homepage": "https://github.com/dravenTherion/qt#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}

@@ -1,4 +1,4 @@
-window.Geom = (function(){
+const Geom = (function(){
     
     const _this   = {};
     
@@ -101,3 +101,21 @@ window.Geom = (function(){
     
     
 })();
+
+const Point = Geom.point,
+      Box = Geom.box,
+      Circ = Geom.circ,
+      dist2Points = Geom.dist2Points,
+      angle = Geom.angle,
+      vector = Geom.vector;
+
+export {
+        Point,
+        Box,
+        Circ,
+        dist2Points,
+        angle,
+        vector
+        };
+/**/
+export default Geom;

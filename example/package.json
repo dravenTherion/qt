@@ -1,0 +1,17 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "quadtree example"
+  ],
+  "author": "Antonio Quitoriano <i.am.quitoriano@gmail.com> (https://www.madpolarlabs.com)",
+  "license": "MIT",
+  "dependencies": {
+    "qt-js": "^1.0.3"
+  }
+}

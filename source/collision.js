@@ -1,8 +1,10 @@
-window.Collision = (function(){
+const Collision = (function(){
     
     const _this = {};
     
-    
+    /**
+    Test collision of 2 rectangles
+    **/
     function _testRect(rec1, rec2){
         
         let outsideBottom   = rec1.y + rec1.height < rec2.y,
@@ -15,11 +17,13 @@ window.Collision = (function(){
         
     }
     
-    
+    /**
+    Test collision of 2 circles from center
+    **/
     function _testCirc(circ1, circ2){
         
-        let distX       = circ2.x - circ1.x,
-            distY       = circ2.y - circ1.y;
+        let distX       = (circ2.x + circ2.radius) - (circ1.x + circ1.radius),
+            distY       = (circ2.y + circ2.radius) - (circ1.y + circ1.radius);
         
             
         return circ2.radius + circ1.radius >= Math.sqrt(distX * distX + distY * distY);     
@@ -33,3 +37,13 @@ window.Collision = (function(){
     
     
 })();
+
+const testRect = Collision.testRect,
+      testCirc = Collision.testCirc;
+
+export {
+        testRect,
+        testCirc
+        }
+
+export default Collision;

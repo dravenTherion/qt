@@ -1,4 +1,6 @@
-window.QT = (function(){
+import {Box} from './geom.js';
+
+const QT = (function(){
     
     const _this           = {},
         
@@ -59,10 +61,10 @@ window.QT = (function(){
             x           = this.bounds.x,
             y           = this.bounds.y;
             
-        this.nodes[0]   = new Node( this.level + 1, new Geom.box( x, y, quadWidth, quadHeight ) );                             // TOP LEFT quadrant
-        this.nodes[1]   = new Node( this.level + 1, new Geom.box( x + quadWidth, y, quadWidth, quadHeight ) );                 // TOP RIGHT quadrant
-        this.nodes[2]   = new Node( this.level + 1, new Geom.box( x, y + quadHeight, quadWidth, quadHeight ) );                // BOTTOM LEFT quadrant
-        this.nodes[3]   = new Node( this.level + 1, new Geom.box( x + quadWidth, y + quadHeight, quadWidth, quadHeight ) );    // BOTTOM RIGHT quadrant
+        this.nodes[0]   = new Node( this.level + 1, new Box( x, y, quadWidth, quadHeight ) );                             // TOP LEFT quadrant
+        this.nodes[1]   = new Node( this.level + 1, new Box( x + quadWidth, y, quadWidth, quadHeight ) );                 // TOP RIGHT quadrant
+        this.nodes[2]   = new Node( this.level + 1, new Box( x, y + quadHeight, quadWidth, quadHeight ) );                // BOTTOM LEFT quadrant
+        this.nodes[3]   = new Node( this.level + 1, new Box( x + quadWidth, y + quadHeight, quadWidth, quadHeight ) );    // BOTTOM RIGHT quadrant
         
         this.nodes[0].parent = this;
         this.nodes[1].parent = this;
@@ -251,3 +253,5 @@ window.QT = (function(){
     return _this;
 
 })();
+
+export default QT;
